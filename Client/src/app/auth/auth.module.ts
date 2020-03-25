@@ -7,10 +7,7 @@ import { EffectsModule } from "@ngrx/effects";
 import { AuthRoutingModule, COMPONENTS } from "./auth-routing.module";
 import { AuthEffects } from "./store/effects/auth.effects";
 import { reducers } from "./store/reducers";
-import { LoginContainerComponent } from "./containers/login-container/login-container.component";
-import { LoginFormComponent } from "./components/login-form/login-form.component";
-import { RegisterFormComponent } from "./components/register-form/register-form.component";
-import { RegisterContainerComponent } from "./containers/register-container/register-container.component";
+import { PrimeModule } from "../prime/prime.module";
 
 @NgModule({
   declarations: [COMPONENTS],
@@ -19,6 +16,7 @@ import { RegisterContainerComponent } from "./containers/register-container/regi
     ReactiveFormsModule,
     AuthRoutingModule,
     AuthRoutingModule,
+    PrimeModule,
     StoreModule.forFeature("auth", reducers),
     EffectsModule.forFeature([AuthEffects])
   ]
