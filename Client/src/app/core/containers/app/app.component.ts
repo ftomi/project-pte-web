@@ -11,7 +11,7 @@ import { LoginPageActions } from "../../../auth/store/actions";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
-  isLoading$ = this.store.pipe(select(fromLayout.getShowLoader));
+  isLoggingIn$ = this.store.pipe(select(fromLayout.getShowLoader));
   constructor(
     private store: Store<fromLayout.State>,
     private authStore: Store<fromAuth.State>

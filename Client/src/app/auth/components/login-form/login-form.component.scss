@@ -1,20 +1,64 @@
 .login-panel {
-  width: 565px;
-  height: 410px;
+  // width: 50vw;
+  // height: 40vh;
+  // background-color: #fafafa;
+  // position: absolute;
+  // left: 50%;
+  // top: 50%;
+  // margin-left: -25vw;
+  // margin-top: -20vh;
+  // padding: 0;
+  // -moz-border-radius: 3px;
+  // -webkit-border-radius: 3px;
+
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    ". . . . . . . ."
+    ". . . form form . . ."
+    ". . . . . . . .";
+}
+
+form {
+  height: 100%;
+}
+
+.login-form {
+  grid-area: form;
   background-color: #fafafa;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -282px;
-  margin-top: -232px;
-  padding: 0;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
-    0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 12px 17px 2px rgba(0, 0, 0, 0.14);
-  -moz-box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
-    0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 12px 17px 2px rgba(0, 0, 0, 0.14);
   box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
     0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 12px 17px 2px rgba(0, 0, 0, 0.14);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form-elements {
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-text-boxes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hundred {
+  width: 25vw;
+  //   padding-left: 10%;
+  //   padding-right: 10%;
+}
+
+.form-control-row {
+  margin-bottom: 5%;
 }

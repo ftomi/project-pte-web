@@ -1,6 +1,6 @@
 <!-- if not loading -->
 <!-- navbar if loggedin -->
-<div *ngIf="!(isLoading$ | async); else loading">
+<div *ngIf="!(isLoggingIn$ | async); else loading">
   <router-outlet></router-outlet>
 </div>
 

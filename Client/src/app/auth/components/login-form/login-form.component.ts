@@ -1,7 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { Store, select } from "@ngrx/store";
-import * as fromAuth from "../../store/reducers";
-import { LoginPageActions } from "../../store/actions";
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { FormGroup, FormControl } from "@angular/forms";
 import { Credentials } from "../../models/user";
 
 @Component({
@@ -9,21 +7,30 @@ import { Credentials } from "../../models/user";
   templateUrl: "./login-form.component.html",
   styleUrls: ["./login-form.component.scss"]
 })
-export class LoginFormComponent implements OnInit {
-  pending$ = this.store.pipe(select(fromAuth.getLoginPagePending));
-  error$ = this.store.pipe(select(fromAuth.getLoginPageError));
+export class LoginFormComponent {
+  @Input()
+  set pending(isPending: boolean) {
+    if (isPending) {
+      this.loginForm.disable();
+    } else {
+      this.loginForm.enable();
+    }
+  }
 
-  constructor(private store: Store<fromAuth.State>) {}
+  @Input() errorMessage: string | null;
 
-  ngOnInit(): void {}
+  @Output() submitted = new EventEmitter<Credentials>();
 
-  login() {
-    let credentials: Credentials = {
-      email: "tomifarkas@yahoo.com",
-      password: "Abcd1234"
-    };
+  loginForm: FormGroup = new FormGroup({
+    email: new FormControl(""),
+    password: new FormControl("")
+  });
 
-    console.log("creds: ", credentials);
-    this.store.dispatch(LoginPageActions.login({ credentials }));
+  constructor() {}
+
+  submit() {
+    if (this.loginForm.valid) {
+      this.submitted.emit(this.loginForm.value);
+    }
   }
 }

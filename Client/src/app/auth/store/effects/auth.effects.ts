@@ -19,7 +19,10 @@ export class AuthEffects {
     exhaustMap((auth: Credentials) =>
       this.authService.login(auth).pipe(
         map(user => AuthApiActions.loginSuccess({ user })),
-        catchError(error => of(AuthApiActions.loginFailure({ error })))
+        catchError(error => {
+          this.authService.setLoginMessage(error);
+          return of(AuthApiActions.loginFailure({ error }));
+        })
       )
     )
   );

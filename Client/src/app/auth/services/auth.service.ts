@@ -68,4 +68,9 @@ export class AuthService {
       this.store.dispatch(LayoutActions.hideLoader());
     }
   }
+
+  setLoginMessage(message: string) {
+    // TODO: show toast message with error... - LayoutAction.setToastMessage(message)
+    console.log(message);
+  }
 }

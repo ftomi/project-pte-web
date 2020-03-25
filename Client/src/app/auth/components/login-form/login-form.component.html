@@ -1,8 +1,40 @@
 <div class="login-panel">
-  <button
-    pButton
-    type="button"
-    (click)="login()"
-    label="Bejelentkezés"
-  ></button>
+  <div class="login-form">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="login-form-elements">
+        <div class="form-text-boxes">
+          <div class="ui-inputgroup hundred form-control-row">
+            <span class="ui-inputgroup-addon"
+              ><i class="pi pi-user" style="line-height: 1.25;"></i
+            ></span>
+            <input
+              type="text"
+              class="hundred"
+              pInputText
+              placeholder="Email"
+              formControlName="email"
+            />
+          </div>
+          <div class="ui-inputgroup hundred form-control-row">
+            <span class="ui-inputgroup-addon"
+              ><i class="pi pi-lock" style="line-height: 1.25;"></i
+            ></span>
+            <input
+              type="password"
+              class="hundred"
+              pPassword
+              placeholder="*******"
+              formControlName="password"
+            />
+          </div>
+        </div>
+        <button
+          pButton
+          type="submit"
+          class=" form-control-row"
+          label="Bejelentkezés"
+        ></button>
+      </div>
+    </form>
+  </div>
 </div>
