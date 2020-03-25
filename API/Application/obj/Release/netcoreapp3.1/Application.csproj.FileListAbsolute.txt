@@ -1,0 +1,13 @@
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Application.deps.json
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Application.dll
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Application.pdb
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Domain.dll
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Persistence.dll
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Domain.pdb
+D:\_repos\pte project\API\Application\bin\Release\netcoreapp3.1\Persistence.pdb
+D:\_repos\pte project\API\Application\obj\Release\netcoreapp3.1\Application.csprojAssemblyReference.cache
+D:\_repos\pte project\API\Application\obj\Release\netcoreapp3.1\Application.AssemblyInfoInputs.cache
+D:\_repos\pte project\API\Application\obj\Release\netcoreapp3.1\Application.AssemblyInfo.cs
+D:\_repos\pte project\API\Application\obj\Release\netcoreapp3.1\Application.csproj.CopyComplete
+D:\_repos\pte project\API\Application\obj\Release\netcoreapp3.1\Application.dll
+D:\_repos\pte project\API\Application\obj\Release\netcoreapp3.1\Application.pdb

@@ -1,0 +1,8 @@
+D:\_repos\pte project\API\Domain\bin\Release\netcoreapp3.1\Domain.deps.json
+D:\_repos\pte project\API\Domain\bin\Release\netcoreapp3.1\Domain.dll
+D:\_repos\pte project\API\Domain\bin\Release\netcoreapp3.1\Domain.pdb
+D:\_repos\pte project\API\Domain\obj\Release\netcoreapp3.1\Domain.csprojAssemblyReference.cache
+D:\_repos\pte project\API\Domain\obj\Release\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+D:\_repos\pte project\API\Domain\obj\Release\netcoreapp3.1\Domain.AssemblyInfo.cs
+D:\_repos\pte project\API\Domain\obj\Release\netcoreapp3.1\Domain.dll
+D:\_repos\pte project\API\Domain\obj\Release\netcoreapp3.1\Domain.pdb

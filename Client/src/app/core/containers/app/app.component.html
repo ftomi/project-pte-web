@@ -1,0 +1,10 @@
+<!-- if not loading -->
+<!-- navbar if loggedin -->
+<div *ngIf="!(isLoading$ | async); else loading">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- if loading -> spinner -->
+<ng-template #loading>
+  loading...
+</ng-template>
