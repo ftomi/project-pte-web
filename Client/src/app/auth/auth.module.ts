@@ -7,7 +7,8 @@ import { EffectsModule } from "@ngrx/effects";
 import { AuthRoutingModule, COMPONENTS } from "./auth-routing.module";
 import { AuthEffects } from "./store/effects/auth.effects";
 import { reducers } from "./store/reducers";
-import { PrimeModule } from "../prime/prime.module";
+import { PrimeModule } from "../ui/prime.module";
+import { MaterialModule } from "../ui/material.module";
 
 @NgModule({
   declarations: [COMPONENTS],
@@ -17,6 +18,7 @@ import { PrimeModule } from "../prime/prime.module";
     AuthRoutingModule,
     AuthRoutingModule,
     PrimeModule,
+    MaterialModule,
     StoreModule.forFeature("auth", reducers),
     EffectsModule.forFeature([AuthEffects])
   ]

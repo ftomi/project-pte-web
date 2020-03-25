@@ -13,10 +13,12 @@
 
   height: 100vh;
   display: grid;
+  grid-template-rows: 1fr 410px 1fr;
+  grid-template-columns: auto 565px auto;
   grid-template-areas:
-    ". . . . . . . ."
-    ". . . form form . . ."
-    ". . . . . . . .";
+    ". . ."
+    ". form ."
+    ". . .";
 }
 
 form {
@@ -25,15 +27,16 @@ form {
 
 .login-form {
   grid-area: form;
-  background-color: #fafafa;
-  border-radius: 3px;
-  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
-    0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 12px 17px 2px rgba(0, 0, 0, 0.14);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // background-color: #fafafa;
+  // border-radius: 3px;
+  // box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
+  //   0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 12px 17px 2px rgba(0, 0, 0, 0.14);
+  // width: 565px;
+  // height: 410px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .login-form-elements {
@@ -61,4 +64,21 @@ form {
 
 .form-control-row {
   margin-bottom: 5%;
+}
+
+mat-form-field {
+  // padding-left: 5%;
+  // padding-right: 5%;
+}
+button {
+  margin-top: 10px;
+}
+
+mat-form-field:first-of-type {
+  margin-top: 50px;
+}
+
+.body {
+  padding-left: 5%;
+  padding-right: 5%;
 }

@@ -1,40 +1,46 @@
-<div class="login-panel">
-  <div class="login-form">
-    <form [formGroup]="loginForm" (ngSubmit)="submit()">
-      <div class="login-form-elements">
-        <div class="form-text-boxes">
-          <div class="ui-inputgroup hundred form-control-row">
-            <span class="ui-inputgroup-addon"
-              ><i class="pi pi-user" style="line-height: 1.25;"></i
-            ></span>
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <div class="login-panel">
+    <div class="login-form ui-fluid">
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="form-content">
+       
+      </div>
+
+    </form>-->
+      <p-card class="p-card-login">
+        <p-header> </p-header>
+        <div class="body">
+          <mat-form-field class="full-width ">
+            <mat-label>Email cím</mat-label>
             <input
-              type="text"
-              class="hundred"
-              pInputText
+              class="full-width"
+              matInput
               placeholder="Email"
               formControlName="email"
             />
-          </div>
-          <div class="ui-inputgroup hundred form-control-row">
-            <span class="ui-inputgroup-addon"
-              ><i class="pi pi-lock" style="line-height: 1.25;"></i
-            ></span>
+          </mat-form-field>
+          <mat-form-field class="full-width ">
+            <mat-label>Jelszó</mat-label>
             <input
               type="password"
-              class="hundred"
-              pPassword
+              class="full-width"
+              matInput
               placeholder="*******"
               formControlName="password"
             />
-          </div>
+          </mat-form-field>
         </div>
-        <button
-          pButton
-          type="submit"
-          class=" form-control-row"
-          label="Bejelentkezés"
-        ></button>
-      </div>
-    </form>
+        <p-footer>
+          <div class="body">
+            <button
+              pButton
+              type="submit"
+              class=" "
+              label="Bejelentkezés"
+            ></button>
+          </div>
+        </p-footer>
+      </p-card>
+    </div>
   </div>
-</div>
+</form>
