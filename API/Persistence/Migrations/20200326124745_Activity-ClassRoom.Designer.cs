@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20200326124745_Activity-ClassRoom")]
+    partial class ActivityClassRoom
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,9 +75,6 @@ namespace Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("AvailableSeats")
-                        .HasColumnType("int");
-
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
@@ -87,7 +86,7 @@ namespace Persistence.Migrations
                     b.ToTable("ClassRooms");
                 });
 
-            modelBuilder.Entity("Domain.UserActivities", b =>
+            modelBuilder.Entity("Domain.UserActivity", b =>
                 {
                     b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(450)");
@@ -104,19 +103,16 @@ namespace Persistence.Migrations
                     b.Property<bool>("IsHost")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Seat")
-                        .HasColumnType("int");
-
                     b.HasKey("AppUserId", "ActivityId");
 
                     b.HasIndex("ActivityId");
 
                     b.HasIndex("ClassRoomId");
 
-                    b.ToTable("UserActivities");
+                    b.ToTable("UserActivity");
                 });
 
-            modelBuilder.Entity("Domain.UserActivities", b =>
+            modelBuilder.Entity("Domain.UserActivity", b =>
                 {
                     b.HasOne("Domain.Activity", "Activity")
                         .WithMany("UserActivities")

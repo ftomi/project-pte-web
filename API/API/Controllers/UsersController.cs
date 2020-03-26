@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using API.Controllers.Resources;
 using Application;
@@ -15,7 +16,7 @@ namespace API.Controllers
         [HttpGet("conn-test")]
         public ActionResult Test()
         {
-            return Ok("OK");
+            return Ok(Guid.NewGuid());
         }
 
         [AllowAnonymous]

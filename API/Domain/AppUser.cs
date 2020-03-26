@@ -10,7 +10,9 @@ namespace Domain
         public string Email { get; set; }
         public string PasswordHash { get; set; }
         public string UserType { get; set; }
-        //public virtual ICollection<Todo> Todos { get; set; }
         public byte[]? Photo { get; set; }
+
+        public virtual ICollection<UserActivity> UserActivities { get; set; }
+
     }
 }
